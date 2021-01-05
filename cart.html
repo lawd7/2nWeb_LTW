@@ -1,11 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Trang chủ</title>
+    <link rel="icon" type="image/icon" href="/assets/Image/logo3.png">
+    <!-- Link css -->
+    <link rel="stylesheet" href="./assets/style/reset.css">
+    <link rel="stylesheet" href="./assets/style/base.css">
+    <link rel="stylesheet" href="./assets/style/main.css">
+    <!-- Link font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.1-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-top">
+                <div class="color-bar"></div>
+                <div class="grid">
+                    <div class="grid__row">
+                        <div class="grid__column-6">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="./assets/Image/logo.png" style="width:246px;" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="grid__column-6">
+
+                            <ul class="header-top__menu">
+                                <li><a href="index.html">TRANG CHỦ</a></li>
+                                <li class="dropdown"><button class="dropbtn" disabled>ĐẶT HÀNG TẠI <i
+                                            class="fa fa-angle-down" aria-hidden="true"></i></button>
+                                    <div class="dropdown-content">
+                                        <a href="index-tphcm.html">Tp Hồ Chí Minh</a>
+                                        <a href="index-hn.html">Hà Nội</a>
+                                    </div>
+                                </li>
+                                <!--Login button-->
+                                <li><button onclick="document.getElementById('id-login').style.display='block'"
+                                        class="login-btn">ĐĂNG NHẬP</button></li>
+                                <div class="modal" id='id-login'>
+                                    <form class="modal-content animate" method="POST">
+                                        <div class="login-img">
+                                            <span onclick="document.getElementById('id-login').style.display='none'"
+                                                class="close-login" title="Close Modal">&times;</span>
+                                            <img src="/assets/Image/logo.png" class="login-avt logo">
+                                        </div>
+                                        <div style="padding:16px;">
+                                            <label for="uname"><b>Tài khoản</b></label>
+                                            <input type="text" placeholder="Enter Username" name="uname" required>
+
+                                            <label for="psw"><b>Mật khẩu</b></label>
+                                            <input type="password" placeholder="Enter Password" name="psw" required>
+
+                                            <button class="login-submit-btn" type="submit">Đăng nhập</button>
+                                            <label>
+                                                <input type="checkbox" checked="checked" name="remember"> Ghi nhớ đăng
+                                                nhập
+                                            </label>
+                                        </div>
+                                        <div style="padding:16px;background-color:#f1f1f1">
+                                            <span class="psw"> <a href="#">Quên mật khẩu?</a></span>
+                                        </div>
+                                    </form>
+                                    <!--click ra ngoai man hinh thi close-->
+                                    <script>
+                                        var modal = document.getElementById('id-login');
+                                        window.onclick = function (event) {
+                                            if (event.target == modal) {
+                                                modal.style.display = "none";
+                                            }
+                                        }
+                                    </script>
+
+                                </div>
+                                <!---->
+                                <li><a class="cart" href="cart.html"><i class="fa fa-shopping-cart"
+                                            style="font-size:25px; color:#59ccfd;" aria-hidden="true"></i>
+                                        <span class="tooltip">
+                                            Giỏ hàng
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="grid__full-width">
+                    <div class="header-bottom">
+                        <div class="wrap">
+                            <ul class="mega-menu">
+                                <li><a href=indexDt.html>Điện thoại</a></li>
+                                <li><a href=indexLap.html>Laptop</a></li>
+                                <li><a href=indexTabl.html>Tablet</a></li>
+                                <li><a href=indexPkien.html>Phụ Kiện</a></li>
+                                <li><a href=indexDho.html>Đồng hồ thông minh</a></li>
+                                <li><a href=indexMayIn.html>PC, Máy in</a></li>
+                                <li><a href=indexSim>Sim, Thẻ cào</a></li>
+                                <div class="search-container">
+                                    <form>
+                                        <input type="text" placeholder="Tìm kiếm.." name="search">
+                                    </form>
+                                </div>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="cart-container">
+            <div class="grid">
+                <div class="grid__row" style="padding-left: 100px; padding-right: 100px;">
+                    <div class="grid__column-8">
+                        <div style="width:100%">
+                            <h3 class="cart__list-product-title" style="text-align:center; margin-bottom: 20px;">Danh
+                                sách sản phẩm</h3>
+                            <hr>
+                            <table style="width: 100%; margin-top: 20px; margin-bottom: 20px;" border="1"
+                                cellspacing="0">
+                                <thead>
+                                    <tr style="text-align: center;">
+                                        <th>stt</th>
+                                        <th>Mã hàng</th>
+                                        <th>Tên hàng</th>
+                                        <th>Số lượng</th>
+                                        <th>Đơn giá</th>
+                                        <th>Tổng tiền</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th colspan="6">
+                                            <img src="./assets/Image/preview.png" width="100%" alt="">
+                                        </th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="grid__column-4"
+                        style="font-size: 1.2rem;padding: 50px; margin-top: 60px; background-color: white; border-radius: 20px; border: 1px solid black; height: 75%;">
+                        <h3 class="cart__list-product-title" style="text-align:center;">Thanh toán hóa đơn</h3>
+                        <hr>
+                        <div class="grid__row margin-bottom-10px">
+                            <p class="grid__column-6">Số hóa đơn:</p>
+                            <p class="gird__column-6">Chưa có hóa đơn</p>
+                        </div>
+                        <div class="grid__row margin-bottom-10px">
+                            <p class="grid__column-6">Sản phẩm:</p>
+                            <p class="gird__column-6">0</p>
+                        </div>
+                        <div class="grid__row margin-bottom-10px">
+                            <p class="grid__column-6">Tiền giao dịch: </p>
+                            <p class="grid__column-6">0 vnđ</p>
+
+                        </div>
+                        <div class="grid__row margin-bottom-10px">
+                            <p class="grid__column-6">VAT(10%): </p>
+                            <p class="grid__column-6">0 vnđ</p>
+                        </div>
+                        <hr class="margin-bottom-10px">
+                        <div class="grid__row">
+                            <p class="grid__column-6">Tổng tiền</p>
+                            <p class="grid__column-6">0 vnđ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Footer-->
+        <div class="footer grid">
+            <div class="grid__row grid__full-width">
+                <div class="grid__column-4">
+                    <div>
+                        <div class="col-1">
+                            <img class="logo" src="assets/Image/logo.png"
+                                style="filter: brightness(0) invert(1);margin-top: -20px; ">
+
+                            <p>The best shop for all family <br>
+                                Best PRICE - Best QUALITY
+                            </p>
+                            <br>
+                            <h6>
+                                Contact: (+84)858434225 (VN)
+                            </h6>
+                            <ul class="icon-link">
+                                <li>
+                                    <a href="https://fb.com/nhancao.0901" target="_blank">
+                                        <i class="fa fa-facebook" style="color:white; font-size:34px;"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/d.7law/">
+                                        <i class="fa fa-instagram" style="color:white;font-size:34px;"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com">
+                                        <i class="fa fa-twitter" style="color:white;font-size:34px;"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid__column-4">
+                    <div>
+                        <div class="col-2">
+                            <ul>
+                                <li>
+                                    <a href="./doitra">
+                                        <p>Chính sách đổi trả</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./baohanh">
+                                        <p>Chính sách bảo hành</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./giao hang">
+                                        <p>Giao hàng và thanh toán</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./cart.html">
+                                        <p>Giỏ hàng</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./rules">
+                                        <p>Nội quy cửa hàng</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./tuyendung">
+                                        <p>Tuyển dụng</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid__column-4">
+                    <div>
+                        <div class="col-3">
+                            <p>
+                                ĐÂY LÀ ĐỒ ÁN MÔN LẬP TRÌNH WEB
+                                <br>
+                                Giảng viên: thầy TRẦN PHƯƠNG TUẤN
+                            </p>
+                            <h1 style="border: white solid 2px;"></h1>
+                            <p>
+                                Tham gia đồ án gồm có:
+                            <ul style="text-align: left; list-style: circle;">
+                                <li>Cao Quý Nhân</li>
+                                <li>Trương Lập Nhân</li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
