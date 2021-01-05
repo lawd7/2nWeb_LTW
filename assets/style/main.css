@@ -1,0 +1,501 @@
+.header {
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    display: block;
+}
+
+.color-bar {
+    background: #59ccfd;
+    padding: 5px 0;
+    box-shadow: 0px 1px 10px grey;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+.logo {
+    margin-right: 10%;
+    padding-left: 50px;
+    padding-top: 10px;
+}
+
+.logo:hover {
+    filter: saturate(10) brightness(150%) hue-rotate(1000deg) drop-shadow(8px 8px 10px gray);
+    transition: 0.5s;
+}
+
+.header-top__menu{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-left: 150px;
+    font-size:0.89em;
+}
+.header-top__menu > li{
+    margin-right: 25px;
+}
+.dropbtn {
+    border: none;
+    color: black;
+    font-size: 100%;
+}
+
+.dropdown {
+
+
+    max-width: 960px;
+    /* 2 */
+
+    padding-right: 10px;
+    /* 3 */
+    padding-left: 10px;
+    /* 3 */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 100%;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    color: #555
+}
+
+.cart {
+    display: inline-block;
+}
+
+.cart:hover {
+    filter: hue-rotate(270deg);
+}
+
+.cart .tooltip {
+    visibility: hidden;
+    width: 55px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px 0;
+    position: absolute;
+    top: 20px;
+}
+
+.cart:hover .tooltip {
+    visibility: visible;
+}
+.header-bottom {
+    background-color: #99d9f2;
+    padding: 5px 0;
+}
+
+
+.mega-menu {
+    display: flex;
+    list-style: none;
+    max-width: 100%;
+    margin-left:30px;
+}
+
+.mega-menu>li>a {
+    float: left;
+    padding: 8px 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 0.95em;
+    color: white;
+    border-radius: 9px;
+    transition: all .4s ease-in-out;
+    background-size: 300% 100%;
+}
+
+.mega-menu li a:hover {
+    background-position: 100% 0;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}
+.search-container{
+    margin-left:200px;
+    border-radius: 20%;
+}
+.mega-menu input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border-radius: none;
+}
+
+/*Login form*/
+.login-btn{
+    border: none;
+    cursor: pointer;
+}
+.modal{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid red;
+  width: 40%; /* Could be more or less, depending on screen size */
+}
+
+.login-img{
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+.close-login{
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #4481eb;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close-login:hover{
+    color:green;
+}
+.login-avt{
+    width: auto;
+    margin-left:50px;
+}
+.login-submit-btn{
+    background-color: #25aae1;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+
+/* Slideshow */
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+.active {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* ---------------- */
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/*banner*/
+
+.banner{
+    margin-top: 15px;
+    position: relative;
+    height: 360px;
+}
+.mySlides {display: none;}
+/* Slideshow container */
+.slideshow-container {
+    left: 40px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color:#04befe;
+}
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+.ads{
+    display: block;
+    float: right;
+    width: 35%;
+    height: 354px;
+    overflow: hidden;
+    position: relative;
+}
+.video-dx{
+    display: block;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+    background: #f1f1f1;
+    width: 84.5%;
+    line-height: 1.3em;
+    
+}
+.ads figure h2 a{
+    background-image: linear-gradient(to right, #59ccfd, white);
+    float: left;
+    border-top-right-radius:  100%;
+    font-size: 0.5em;
+    width: 450px;
+    color:white;
+}
+.ads figure h2 a p{
+    margin-left: 8px;
+}
+.ads ul{
+    display: block;
+    overflow: hidden;
+}
+.ads ul li{
+    display: block;
+}
+.ads ul li a{
+    display: flex;
+    margin-bottom: 5px;
+    background-image: linear-gradient(to right, #59ccfd, white);
+    border-top-right-radius: 100%;
+}
+.ads ul li a img{
+    margin-bottom: 5px;
+    margin-top:5px;
+    margin-left: 5px;
+}
+.ads ul li a h5{
+    margin-left: 10px;
+    font-size:12px;
+    color: black;
+}
+.ads ul li a h5:hover{
+    color:#4a90e2;
+}
+
+/**/
+
+.content{
+    overflow: hidden;
+}
+.wrap-content{
+    margin:0px 72px 45px 40px;
+    padding: 10px;
+    border:#04befe solid 2px;
+    background-color: white;
+    overflow: hidden;
+}
+.hot-phone, .hot-lap, .hot-watch, .hot-another{
+    overflow: hidden;
+}
+.nametag-content{
+    background-image: linear-gradient(to right, #59ccfd, white);
+    border-top-right-radius: 50%;
+    padding-left:10px;
+    color:white;
+    font-size: medium;
+}
+.hot-phone-content{
+    display: flex;
+    border-left: #59ccfd solid 2px;
+}
+.sp{
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 0 10px 0 10px;
+}
+.content a{
+    margin-left: 30px;
+    font-size: 0.89em;
+    text-align: center;
+}
+.content a img{
+    width: 133px;
+    height: 182px;
+    display: block;
+    transition: all .2s ease-in-out;
+}
+.content .sp a img:hover{
+    margin: -5px;
+    transition: all .2s ease-in-out;
+}
+
+
+.on-top-btn{
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    
+}
+#myBtn{
+    cursor: pointer;
+    border: none;
+    transition: all .4s ease-in-out;
+}
+
+
+/* footer */
+.footer{
+    display: block;
+    background-color:#207dff;
+    color: rgba(255, 255, 255, 0.7);
+}
+.col-1, .col-2, .col-3{
+    padding-right: 100px;
+    padding-top: 50px;
+    display: block;
+    text-align: center;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:18px;
+}
+.col-2{
+    text-align: left;
+}
+.icon-link{
+    display: flex;
+    justify-content: center;
+}
+.icon-link i{
+    margin: 20px;
+}
+.col-2 a:link{
+    color:rgba(255, 255, 255, 0.7);
+}
+.col-2 a:hover{
+    color: whitesmoke;
+}
+.col-2 li a p{
+    padding-bottom: 15px;
+}
+.col-3{
+    font-size: 14px;
+}

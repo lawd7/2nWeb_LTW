@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="icon" type="image/icon" href="/assets/Image/logo3.png">
+    <!-- Link css -->
+    <link rel="stylesheet" href="./assets/style/reset.css">
+    <link rel="stylesheet" href="./assets/style/base.css">
+    <link rel="stylesheet" href="./assets/style/main.css">
+    <!-- Link font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.1-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-top">
+                <div class="color-bar"></div>
+                <div class="grid">
+                    <div class="grid__row">
+                        <div class="grid__column-6">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="./assets/Image/logo.png" style="width:246px;" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="grid__column-6">
+
+                            <ul class="header-top__menu">
+                                <li><a href="index.html">TRANG CHỦ</a></li>
+                                <li class="dropdown"><button class="dropbtn" disabled>ĐẶT HÀNG TẠI <i
+                                            class="fa fa-angle-down" aria-hidden="true"></i></button>
+                                    <div class="dropdown-content">
+                                        <a href="index-tphcm.html">Tp Hồ Chí Minh</a>
+                                        <a href="index-hn.html">Hà Nội</a>
+                                    </div>
+                                </li>
+                                <!--Login button-->
+                                <li><button onclick="document.getElementById('id-login').style.display='block'"
+                                        class="login-btn">ĐĂNG NHẬP</button></li>
+                                <div class="modal" id='id-login'>
+                                    <form class="modal-content animate" method="POST">
+                                        <div class="login-img">
+                                            <span onclick="document.getElementById('id-login').style.display='none'"
+                                                class="close-login" title="Close Modal">&times;</span>
+                                            <img src="/assets/Image/logo.png" class="login-avt logo">
+                                        </div>
+                                        <div style="padding:16px;">
+                                            <label for="uname"><b>Tài khoản</b></label>
+                                            <input type="text" placeholder="Enter Username" name="uname" required>
+
+                                            <label for="psw"><b>Mật khẩu</b></label>
+                                            <input type="password" placeholder="Enter Password" name="psw" required>
+
+                                            <button class="login-submit-btn" type="submit">Đăng nhập</button>
+                                            <label>
+                                                <input type="checkbox" checked="checked" name="remember"> Ghi nhớ đăng
+                                                nhập
+                                            </label>
+                                        </div>
+                                        <div style="padding:16px;background-color:#f1f1f1">
+                                            <span class="psw"> <a href="#">Quên mật khẩu?</a></span>
+                                        </div>
+                                    </form>
+                                    <!--click ra ngoai man hinh thi close-->
+                                    <script>
+                                        var modal = document.getElementById('id-login');
+                                        window.onclick = function (event) {
+                                            if (event.target == modal) {
+                                                modal.style.display = "none";
+                                            }
+                                        }
+                                    </script>
+
+                                </div>
+                                <!---->
+                                <li><a class="cart" href="cart.html"><i class="fa fa-shopping-cart"
+                                            style="font-size:25px; color:#59ccfd;" aria-hidden="true"></i>
+                                        <span class="tooltip">
+                                            Giỏ hàng
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="grid__full-width">
+                    <div class="header-bottom">
+                        <div class="wrap">
+                            <ul class="mega-menu">
+                                <li><a href=indexDt.html>Điện thoại</a></li>
+                                <li><a href=indexLap.html>Laptop</a></li>
+                                <li><a href=indexTabl.html>Tablet</a></li>
+                                <li><a href=indexPkien.html>Phụ Kiện</a></li>
+                                <li><a href=indexDho.html>Đồng hồ thông minh</a></li>
+                                <li><a href=indexMayIn.html>PC, Máy in</a></li>
+                                <li><a href=indexSim>Sim, Thẻ cào</a></li>
+                                <div class="search-container">
+                                    <form>
+                                        <input type="text" placeholder="Tìm kiếm.." name="search">
+                                    </form>
+                                </div>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Slideshow -->
+        <section class="banner">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <a href="ip.html">
+                        <img src="./assets/Image/Banner/galaxy_banner.png" height="315px" style="width:100%">
+                    </a>
+                </div>
+
+                <div class="mySlides fade">
+                    <a href="laptop.html">
+                        <img src="./assets/Image/Banner/ip_banner.png" height="315px" style="width:100%">
+                    </a>
+                </div>
+
+                <div class="mySlides fade">
+                    <a href="phukien.html">
+                        <img src="./assets/Image/Banner/lap_banner.png" height="315px" style="width:100%">
+                    </a>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            </script>
+            <!--- js cho banner-->
+            <script>
+                var checkClick = false;
+                setInterval(function () {
+                    if (!checkClick)
+                        plusSlides(1);
+                    else checkClick = false;
+                }, 3000);
+
+                var slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                    checkClick = true;
+                    showSlides(slideIndex += n);
+                }
+
+
+                function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var fades = document.getElementsByClassName("fade");
+                    if (n > slides.length) { slideIndex = 1 }
+                    if (n < 1) { slideIndex = slides.length }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < fades.length; i++) {
+                        fades[i].className = fades[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    fades[slideIndex - 1].className += " active";
+                }
+            </script>
+            <!--quang cao-->
+            <div class="ads">
+                <figure class="video-dx">
+                    <h2>
+                        <a href="https://youtube.com" target="_blank">
+                            <p>ĐỀ XUẤT VIDEO:</p>
+                        </a>
+                    </h2>
+                </figure>
+                <ul class="video-dx">
+                    <li>
+                        <a href="https://www.youtube.com/results?search_query=samsung+a30+review" target="_blank">
+                            <img width="70px" height="50px" src="./assets/Image/Ads/reviewSS.jpg">
+                            <h5>Review điện thoại SamSung A30 - Một trong những sản phẩm mới thuộc A-series.</h5>
+                        </a>
+                    </li>
+                </ul>
+                <a href="ads1.html">
+                    <img src="./assets/Image/Ads/398-110-398x110-2.png" width="399.5px">
+                </a>
+                <a href=" ads2.html">
+                    <img src="./assets/Image/Ads/M51-398-110-398x110.png" width="399.5px">
+                </a>
+            </div>
+        </section>
+
+        <!--Content-->
+        <div class="content">
+            <!--6 dien thoat dang hot-->
+            <div class="wrap-content">
+                <div class="hot-phone">
+                    <div class="nametag-content">
+                        <p>TOP ĐIỆN THOẠI BÁN CHẠY:</p>
+                    </div>
+                    <div class="hot-phone-content">
+                        <div class="sp">
+                            <a href="">
+                                <img src="./assets/Image/img/img/6.jpg" /><br />
+                                <p>OPPO A93</p>
+                                <p style="color:red;">Giá: 12.000.000đ</p>
+                                <p>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star"
+                                        style="font-size:10px; color: rgba(153, 146, 146, 0.603)"></span>
+                                </p>
+                            </a>
+
+                        </div>
+                        <div class="sp">
+                            <a href="">
+                                <img src="./assets/Image/img/img/20191108175723_44202.png"
+                                    style=" width: 200px;height: 182px;" /><br />
+                                <p>Xiaomi Note8</p>
+                                <p style="color:red;">Giá: 12.000.000đ</p>
+                                <p>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star"
+                                        style="font-size:10px; color: rgba(153, 146, 146, 0.603)"></span>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="sp">
+                            <a href="">
+                                <img src="./assets/Image/img/img/2.jpg" /><br />
+                                <p>Iphone XS</p>
+                                <p style="color:red;">Giá: 12.000.000đ</p>
+                                <p>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color: #59ccfd"></span>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="sp">
+                            <a href="">
+                                <img src="./assets/Image/img/img/3.jpg" /><br />
+                                <p>Iphone 12</p>
+                                <p style="color:red;">Giá: 12.000.000đ</p>
+                                <p>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color: #59ccfd"></span>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="sp">
+                            <a href="">
+                                <img src="./assets/Image/img/img/4.png" /><br />
+                                <p> Redmi Note7</p>
+                                <p style="color:red;">Giá: 12.000.000đ</p>
+                                <p>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star"
+                                        style="font-size:10px; color: rgba(153, 146, 146, 0.603)"></span>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="sp">
+                            <a href="">
+                                <img src="./assets/Image/img/img/5.png" />
+                                <br />
+                                <p>VSmart Joy8</p>
+                                <p style="color:red;">Giá: 12.000.000đ</p>
+                                <p>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star"
+                                        style="font-size:10px; color: rgba(153, 146, 146, 0.603)"></span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Top laptop-->
+            <div class="wrap-content">
+                <div class="hot-lap">
+                    <div class="nametag-content">
+                        <p>TOP LAPTOP BÁN CHẠY:</p>
+                    </div>
+                    <div class="hot-phone-content">
+                        <div class="sp">
+                            <a href="">
+                                <img src="./assets/Image/img/img/macbook-air-gold-select-201810.jpg" /><br />
+                                <p>Macbook Air 20 Gold</p>
+                                <p style="color:red;">Giá: 24.000.000đ</p>
+                                <p>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star"
+                                        style="font-size:10px; color: rgba(153, 146, 146, 0.603)"></span>
+                                </p>
+                            </a>
+
+                        </div>
+                        <div class="sp">
+                            <a href="">
+                                <img
+                                    src="./assets/Image/img/img/637341346187022999_lenovo-ideapad-c340-15-den-dd.png" /><br />
+                                <p>Lenovo ideapad c340</p>
+                                <p style="color:red;">Giá: 12.000.000đ</p>
+                                <p>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star"
+                                        style="font-size:10px; color: rgba(153, 146, 146, 0.603)"></span>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="sp">
+                            <a href="">
+                                <img
+                                    src="./assets/Image/img/img/637407048381275944_dell-inspiron-n3501a-den-1.png" /><br />
+                                <p>Dell Insprion N359001 </p>
+                                <p style="color:red;">Giá: 11.999.000đ</p>
+                                <p>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color: #59ccfd"></span>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="sp">
+                            <a href="">
+                                <img src="./assets/Image/img/img/637266923419786995_hp-15s-fq-bac-dd.png" /><br />
+                                <p>HP 15s FQ</p>
+                                <p style="color:red;">Giá: 12.000.000đ</p>
+                                <p>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color: #59ccfd"></span>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="sp">
+                            <a href="">
+                                <img
+                                    src="./assets/Image/img/img/laptop-msi-gaming-gf63-thin-9scxr-075vn_1_.jpg" /><br />
+                                <p>MSI Gaming GF3 THIN </p>
+                                <p style="color:red;">Giá: 17.450.000đ</p>
+                                <p>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star"
+                                        style="font-size:10px; color: rgba(153, 146, 146, 0.603)"></span>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="sp">
+                            <a href="">
+                                <img
+                                    src="./assets/Image/img/img/laptop-huawei-matebook-13_0005_laptop-huawei-matebook-13_4_.jpg" />
+                                <br />
+                                <p>Huawei Matebook 13</p>
+                                <p style="color:red;">Giá: 12.000.000đ</p>
+                                <p>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star"
+                                        style="font-size:10px; color: rgba(153, 146, 146, 0.603)"></span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Top Đồng hồ-->
+            <div class="wrap-content">
+                <div class="hot-another">
+                    <div class="nametag-content">
+                        <p>TOP ĐỒNG HỒ BÁN CHẠY:</p>
+                    </div>
+                    <div class="hot-phone-content">
+                        <div class="sp">
+                            <a href="">
+                                <img src="./assets/Image/img/img/haylou-ls02-300x300.jpg" /><br />
+                                <p>Đồng hồ thông minh Xiaomi Haylou LS02</p>
+                                <p style="color:red;">Giá: 549.000đ</p>
+                                <p>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star"
+                                        style="font-size:10px; color: rgba(153, 146, 146, 0.603)"></span>
+                                </p>
+                            </a>
+
+                        </div>
+                        <div class="sp">
+                            <a href="">
+                                <img src="./assets/Image/img/img/apple-watch-series-6-40mm_2.jpg" /><br />
+                                <p>Apple Watch Series 6</p>
+                                <p style="color:red;">Giá: 10.300.000đ</p>
+                                <p>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star"
+                                        style="font-size:10px; color: rgba(153, 146, 146, 0.603)"></span>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="sp">
+                            <a href="">
+                                <img src="./assets/Image/img/img/ls01-300x300.jpg" /><br />
+                                <p>Đồng hồ thông minh Xiaomi Haylou LS01</p>
+                                <p style="color:red;">Giá: 560.000đ</p>
+                                <p>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color: #59ccfd"></span>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="sp">
+                            <a href="">
+                                <img src="./assets/Image/img/img/img.jpg" /><br />
+                                <p>Apple Watch Series 5</p>
+                                <p style="color:red;">Giá: 7.000.000đ</p>
+                                <p>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color: #59ccfd"></span>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="sp">
+                            <a href="">
+                                <img src="./assets/Image/img/img/apple-watch-series-6-44mm-4g-5.jpg" /><br />
+                                <p> Apple Watch Series 6 4G</p>
+                                <p style="color:red;">Giá: 13.500.000đ</p>
+                                <p>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star"
+                                        style="font-size:10px; color: rgba(153, 146, 146, 0.603)"></span>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="sp">
+                            <a href="">
+                                <img src="./assets/Image/img/img/1565204800_1491590.jpg" />
+                                <br />
+                                <p>Galaxy Watch Active</p>
+                                <p style="color:red;">Giá: 5.500.000đ</p>
+                                <p>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star"
+                                        style="font-size:10px; color: rgba(153, 146, 146, 0.603)"></span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Một vài sản phẩm khác-->
+            <div class="wrap-content">
+                <div class="hot-lap">
+                    <div class="nametag-content">
+                        <p>CÁC SẢN PHẨM BÁN CHẠY KHÁC:</p>
+                    </div>
+                    <div class="hot-phone-content">
+                        <div class="sp">
+                            <a href="">
+                                <img
+                                    src="./assets/Image/img/img/tai-nghe-bluetooth-airpods-2-wireless-charge-mrxj2-avatar-1-600x600.jpg" /><br />
+                                <p>Airpods 2 Apple </p>
+                                <p style="color:red;">Giá: 4.999.000đ</p>
+                                <p>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star"
+                                        style="font-size:10px; color: rgba(153, 146, 146, 0.603)"></span>
+                                </p>
+                            </a>
+
+                        </div>
+                        <div class="sp">
+                            <a href="">
+                                <img
+                                    src="./assets/Image/img/img/tai-nghe-bluetooth-airpods-pro-apple-mwp22-ava-600x600.jpg" /><br />
+                                <p>Airpods Pro Apple</p>
+                                <p style="color:red;">Giá: 12.000.000đ</p>
+                                <p>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star"
+                                        style="font-size:10px; color: rgba(153, 146, 146, 0.603)"></span>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="sp">
+                            <a href="">
+                                <img src="./assets/Image/img/img/apple-airpods-max-2.jpg" /><br />
+                                <p>Airpods Max Apple</p>
+                                <p style="color:red;">Giá: 13.900.000đ</p>
+                                <p>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color: #59ccfd"></span>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="sp">
+                            <a href="">
+                                <img src="./assets/Image/img/img/fafqwfqw.jpg" /><br />
+                                <p>Sạc dự phòng Energizer</p>
+                                <p style="color:red;">Giá: 459.000đ</p>
+                                <p>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color: #59ccfd"></span>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="sp">
+                            <a href="">
+                                <img src="./assets/Image/img/img/3_14_16.JPG" /><br />
+                                <p> Loa Bluetooth JBL Xtreme 2</p>
+                                <p style="color:red;">Giá: 5.000.000đ</p>
+                                <p>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star"
+                                        style="font-size:10px; color: rgba(153, 146, 146, 0.603)"></span>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="sp">
+                            <a href="">
+                                <img src="./assets/Image/img/img/jbl-pulse-4_1_.JPG" />
+                                <br />
+                                <p>Loa Bluetooth JBL Pulse 4</p>
+                                <p style="color:red;">Giá: 2.999.000đ</p>
+                                <p>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star" style="font-size:10px; color:#59ccfd"></span>
+                                    <span class="fa fa-star"
+                                        style="font-size:10px; color: rgba(153, 146, 146, 0.603)"></span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--on top button-->
+        <div class="on-top-btn">
+            <button onclick="topFunction()" id="myBtn" title="Đầu trang">
+                <i class="fa fa-arrow-up" style="color:#59ccfd; font-size: 25px;"></i>
+            </button>
+            <!--JS cho On top button-->
+            <script>
+                var mybutton = document.getElementById("myBtn");
+                window.onscroll = function () {
+                    scrollFunc();
+                }
+
+                function scrollFunc() {
+                    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                        mybutton.style.display = "block";
+                    }
+                    else mybutton.style.display = "none";
+                }
+                function topFunction() {
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
+                }
+            </script>
+        </div>
+
+        <!--Footer-->
+        <div class="footer grid">
+            <div class="grid__row grid__full-width">
+                <div class="grid__column-4">
+                    <div>
+                        <div class="col-1">
+                            <img class="logo" src="assets/Image/logo.png"
+                                style="filter: brightness(0) invert(1);margin-top: -20px; ">
+
+                            <p>The best shop for all family <br>
+                                Best PRICE - Best QUALITY
+                            </p>
+                            <br>
+                            <h6>
+                                Contact: (+84)858434225 (VN)
+                            </h6>
+                            <ul class="icon-link">
+                                <li>
+                                    <a href="https://fb.com/nhancao.0901" target="_blank">
+                                        <i class="fa fa-facebook" style="color:white; font-size:34px;"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=</a>"https://www.instagram.com/d.7law/">
+                                        <i class="fa fa-instagram" style="color:white;font-size:34px;"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com">
+                                        <i class="fa fa-twitter" style="color:white;font-size:34px;"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid__column-4">
+                    <div>
+                        <div class="col-2">
+                            <ul>
+                                <li>
+                                    <a href="./doitra">
+                                        <p>Chính sách đổi trả</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./baohanh">
+                                        <p>Chính sách bảo hành</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./giao hang">
+                                        <p>Giao hàng và thanh toán</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./cart.html">
+                                        <p>Giỏ hàng</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./rules">
+                                        <p>Nội quy cửa hàng</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./tuyendung">
+                                        <p>Tuyển dụng</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid__column-4">
+                    <div>
+                        <div class="col-3">
+                            <p>
+                                ĐÂY LÀ ĐỒ ÁN MÔN LẬP TRÌNH WEB
+                                <br>
+                                Giảng viên: thầy TRẦN PHƯƠNG TUẤN
+                            </p>
+                            <h1 style="border: white solid 2px;"></h1>
+                            <p>
+                                Tham gia đồ án gồm có:
+                            <ul style="text-align: left; list-style: circle;">
+                                <li>Cao Quý Nhân</li>
+                                <li>Trương Lập Nhân</li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
